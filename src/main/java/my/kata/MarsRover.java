@@ -13,6 +13,9 @@ public class MarsRover {
     }
 
     public void performStoredCommands(String command) {
+        if ("L".equals(command)) {
+            this.direction = "W";
+        }
         if (MOVE_COMMAND.equals(command)) {
             this.yCoordinate++;
         }
