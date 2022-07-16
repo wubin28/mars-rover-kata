@@ -28,11 +28,9 @@ public class MarsRover {
     private void performOneCommand(String command) {
         if (TURN_RIGHT_COMMAND.equals(command)) {
             adjustDirection(WEST, SOUTH, NORTH, EAST);
-        }
-        if (TURN_LEFT_COMMAND.equals(command)) {
+        } else if (TURN_LEFT_COMMAND.equals(command)) {
             adjustDirection(EAST, NORTH, SOUTH, WEST);
-        }
-        if (MOVE_COMMAND.equals(command)) {
+        } else if (MOVE_COMMAND.equals(command)) {
             if(SOUTH.equals(this.direction)) {
                 this.yCoordinate--;
             } else if (EAST.equals(this.direction)) {
