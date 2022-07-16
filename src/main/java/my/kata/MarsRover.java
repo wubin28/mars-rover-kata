@@ -24,7 +24,11 @@ public class MarsRover {
             this.direction = WEST;
         }
         if (MOVE_COMMAND.equals(command)) {
-            this.yCoordinate++;
+            if("S".equals(this.direction)) {
+                this.yCoordinate--;
+            } else {
+                this.yCoordinate++;
+            }
         }
     }
 
