@@ -18,12 +18,14 @@ public class MarsRover {
         this.direction = direction;
     }
 
-    public void performStoredCommands(String command) {
-        if ("MLRMM".equals(command)) {
-            this.xCoordinate = 0;
-            this.yCoordinate = 3;
-            this.direction = "N";
+    public void performStoredCommands(String commands) {
+        char[] commandsInArray = commands.toCharArray();
+        for (char command : commandsInArray) {
+            performOneCommand(Character.toString(command));
         }
+    }
+
+    private void performOneCommand(String command) {
         if (TURN_RIGHT_COMMAND.equals(command)) {
             if (SOUTH.equals(this.direction)) {
                 this.direction = WEST;
