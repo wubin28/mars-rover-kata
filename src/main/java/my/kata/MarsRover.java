@@ -4,6 +4,7 @@ public class MarsRover {
     public static final String MOVE_COMMAND = "M";
     public static final String TURN_LEFT_COMMAND = "L";
     public static final String TURN_RIGHT_COMMAND = "R";
+    public static final String NORTH = "N";
     public static final String SOUTH = "S";
     public static final String WEST = "W";
     public static final String EAST = "E";
@@ -29,7 +30,7 @@ public class MarsRover {
             if (SOUTH.equals(this.direction)) {
                 this.direction = EAST;
             } else if (EAST.equals(this.direction)) {
-                this.direction = "N";
+                this.direction = NORTH;
             } else  {
                 this.direction = WEST;
             }
