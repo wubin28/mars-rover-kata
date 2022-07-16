@@ -66,4 +66,16 @@ public class MarsRover {
     public String getDirection() {
         return this.direction;
     }
+
+    public void move() {
+        if(SOUTH.equals(this.direction)) {
+            this.yCoordinate--;
+        } else if (EAST.equals(this.direction)) {
+            this.xCoordinate++;
+        } else if (WEST.equals(this.direction)) {
+            this.xCoordinate++;
+        } else {
+            this.yCoordinate++;
+        }
+    }
 }
