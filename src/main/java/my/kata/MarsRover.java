@@ -19,7 +19,11 @@ public class MarsRover {
 
     public void performStoredCommands(String command) {
         if (TURN_RIGHT_COMMAND.equals(command)) {
-            this.direction = EAST;
+            if (SOUTH.equals(this.direction)) {
+                this.direction = WEST;
+            } else {
+                this.direction = EAST;
+            }
         }
         if (TURN_LEFT_COMMAND.equals(command)) {
             if (SOUTH.equals(this.direction)) {
