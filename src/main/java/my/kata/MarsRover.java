@@ -82,4 +82,8 @@ public class MarsRover {
     public void turnLeft() {
         adjustDirection(EAST, NORTH, SOUTH, WEST);
     }
+
+    public void turnRight() {
+        adjustDirection(WEST, SOUTH, NORTH, EAST);
+    }
 }
