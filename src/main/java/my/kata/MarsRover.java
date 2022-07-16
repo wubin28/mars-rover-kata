@@ -1,23 +1,32 @@
 package my.kata;
 
 public class MarsRover {
-    public MarsRover(int xCoordinate, int yCoordinate, String direction) {
+    public static final String MOVE_COMMAND = "M";
+    private int xCoordinate;
+    private int yCoordinate;
+    private String direction;
 
+    public MarsRover(int xCoordinate, int yCoordinate, String direction) {
+        this.xCoordinate = xCoordinate;
+        this.yCoordinate = yCoordinate;
+        this.direction = direction;
     }
 
-    public void performStoredCommands(String direction) {
-
+    public void performStoredCommands(String command) {
+        if (MOVE_COMMAND.equals(command)) {
+            this.yCoordinate++;
+        }
     }
 
     public int getXCoordinate() {
-        return 0;
+        return this.xCoordinate;
     }
 
     public int getYCoordinate() {
-        return 1;
+        return this.yCoordinate;
     }
 
     public String getDirection() {
-        return "N";
+        return this.direction;
     }
 }
