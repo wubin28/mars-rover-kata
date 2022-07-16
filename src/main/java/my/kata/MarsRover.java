@@ -28,6 +28,8 @@ public class MarsRover {
         if (TURN_LEFT_COMMAND.equals(command)) {
             if (SOUTH.equals(this.direction)) {
                 this.direction = EAST;
+            } else if (EAST.equals(this.direction)) {
+                this.direction = "N";
             } else  {
                 this.direction = WEST;
             }
