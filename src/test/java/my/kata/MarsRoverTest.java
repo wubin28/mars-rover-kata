@@ -172,4 +172,18 @@ class MarsRoverTest {
         assertEquals(0, marsRover.getYCoordinate());
         assertEquals("N", marsRover.getDirection());
     }
+
+    @Test
+    void should_go_to_0_3_N_when_MLRMM_given_from_0_0_N() {
+        // given
+        MarsRover marsRover = new MarsRover(0, 0, "N");
+
+        // when
+        marsRover.performStoredCommands("MLRMM");
+
+        // then
+        assertEquals(0, marsRover.getXCoordinate());
+        assertEquals(3, marsRover.getYCoordinate());
+        assertEquals("N", marsRover.getDirection());
+    }
 }
