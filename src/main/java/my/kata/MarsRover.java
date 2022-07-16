@@ -27,26 +27,10 @@ public class MarsRover {
 
     private void performOneCommand(String command) {
         if (TURN_RIGHT_COMMAND.equals(command)) {
-            if (SOUTH.equals(this.direction)) {
-                this.direction = WEST;
-            } else if (EAST.equals(this.direction)) {
-                this.direction = SOUTH;
-            } else if (WEST.equals(this.direction)) {
-                this.direction = NORTH;
-            } else {
-                this.direction = EAST;
-            }
+            adjustDirection(WEST, SOUTH, NORTH, EAST);
         }
         if (TURN_LEFT_COMMAND.equals(command)) {
-            if (SOUTH.equals(this.direction)) {
-                this.direction = EAST;
-            } else if (EAST.equals(this.direction)) {
-                this.direction = NORTH;
-            } else if (WEST.equals(this.direction)) {
-                this.direction = SOUTH;
-            } else  {
-                this.direction = WEST;
-            }
+            adjustDirection(EAST, NORTH, SOUTH, WEST);
         }
         if (MOVE_COMMAND.equals(command)) {
             if(SOUTH.equals(this.direction)) {
@@ -58,6 +42,18 @@ public class MarsRover {
             } else {
                 this.yCoordinate++;
             }
+        }
+    }
+
+    private void adjustDirection(String west, String south, String north, String east) {
+        if (SOUTH.equals(this.direction)) {
+            this.direction = west;
+        } else if (EAST.equals(this.direction)) {
+            this.direction = south;
+        } else if (WEST.equals(this.direction)) {
+            this.direction = north;
+        } else {
+            this.direction = east;
         }
     }
 
