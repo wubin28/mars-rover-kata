@@ -35,6 +35,8 @@ public class MarsRover {
         if (MOVE_COMMAND.equals(command)) {
             if(SOUTH.equals(this.direction)) {
                 this.yCoordinate--;
+            }else if (EAST.equals(this.direction)) {
+                this.xCoordinate++;
             } else {
                 this.yCoordinate++;
             }
