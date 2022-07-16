@@ -78,4 +78,8 @@ public class MarsRover {
             this.yCoordinate++;
         }
     }
+
+    public void turnLeft() {
+        adjustDirection(EAST, NORTH, SOUTH, WEST);
+    }
 }
