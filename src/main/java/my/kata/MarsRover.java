@@ -22,6 +22,8 @@ public class MarsRover {
         if (TURN_RIGHT_COMMAND.equals(command)) {
             if (SOUTH.equals(this.direction)) {
                 this.direction = WEST;
+            } else if (EAST.equals(this.direction)) {
+                this.direction = SOUTH;
             } else {
                 this.direction = EAST;
             }
