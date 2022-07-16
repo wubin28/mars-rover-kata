@@ -60,4 +60,18 @@ class MarsRoverTest {
         assertEquals(-1, marsRover.getYCoordinate());
         assertEquals("S", marsRover.getDirection());
     }
+
+    @Test
+    void should_go_to_0_0_E_when_turn_left_given_from_0_0_S() {
+        // given
+        MarsRover marsRover = new MarsRover(0, 0, "S");
+
+        // when
+        marsRover.performStoredCommands("L");
+
+        // then
+        assertEquals(0, marsRover.getXCoordinate());
+        assertEquals(0, marsRover.getYCoordinate());
+        assertEquals("E", marsRover.getDirection());
+    }
 }
