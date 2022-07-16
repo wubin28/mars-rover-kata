@@ -22,7 +22,11 @@ public class MarsRover {
             this.direction = EAST;
         }
         if (TURN_LEFT_COMMAND.equals(command)) {
-            this.direction = WEST;
+            if (SOUTH.equals(this.direction)) {
+                this.direction = EAST;
+            } else  {
+                this.direction = WEST;
+            }
         }
         if (MOVE_COMMAND.equals(command)) {
             if(SOUTH.equals(this.direction)) {
