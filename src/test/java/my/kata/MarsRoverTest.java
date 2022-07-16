@@ -140,7 +140,7 @@ class MarsRoverTest {
         marsRover.performStoredCommands("M");
 
         // then
-        assertEquals(1, marsRover.getXCoordinate());
+        assertEquals(-1, marsRover.getXCoordinate());
         assertEquals(0, marsRover.getYCoordinate());
         assertEquals("W", marsRover.getDirection());
     }

@@ -36,7 +36,7 @@ public class MarsRover {
             } else if (EAST.equals(this.direction)) {
                 this.xCoordinate++;
             } else if (WEST.equals(this.direction)) {
-                this.xCoordinate++;
+                this.xCoordinate--;
             } else {
                 this.yCoordinate++;
             }
@@ -73,7 +73,7 @@ public class MarsRover {
         } else if (EAST.equals(this.direction)) {
             this.xCoordinate++;
         } else if (WEST.equals(this.direction)) {
-            this.xCoordinate++;
+            this.xCoordinate--;
         } else {
             this.yCoordinate++;
         }
