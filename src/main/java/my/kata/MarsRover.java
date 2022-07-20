@@ -31,15 +31,19 @@ public class MarsRover {
         } else if (TURN_LEFT_COMMAND.equals(command)) {
             adjustDirection(EAST, NORTH, SOUTH, WEST);
         } else if (MOVE_COMMAND.equals(command)) {
-            if(SOUTH.equals(this.direction)) {
-                this.yCoordinate--;
-            } else if (EAST.equals(this.direction)) {
-                this.xCoordinate++;
-            } else if (WEST.equals(this.direction)) {
-                this.xCoordinate++;
-            } else {
-                this.yCoordinate++;
-            }
+            move();
+        }
+    }
+
+    private void move() {
+        if(SOUTH.equals(this.direction)) {
+            this.yCoordinate--;
+        } else if (EAST.equals(this.direction)) {
+            this.xCoordinate++;
+        } else if (WEST.equals(this.direction)) {
+            this.xCoordinate++;
+        } else {
+            this.yCoordinate++;
         }
     }
 
