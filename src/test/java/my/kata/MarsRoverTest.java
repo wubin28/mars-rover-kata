@@ -11,7 +11,7 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "N");
 
         // when
-        marsRover.performStoredCommands("M");
+        marsRover.executeCommands("M");
 
         // then
         assertEquals(0, marsRover.getXCoordinate());
@@ -25,7 +25,7 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "N");
 
         // when
-        marsRover.performStoredCommands("L");
+        marsRover.executeCommands("L");
 
         // then
         assertEquals(0, marsRover.getXCoordinate());
@@ -39,7 +39,7 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "N");
 
         // when
-        marsRover.performStoredCommands("R");
+        marsRover.executeCommands("R");
 
         // then
         assertEquals(0, marsRover.getXCoordinate());
@@ -53,7 +53,7 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "S");
 
         // when
-        marsRover.performStoredCommands("M");
+        marsRover.executeCommands("M");
 
         // then
         assertEquals(0, marsRover.getXCoordinate());
@@ -67,7 +67,7 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "S");
 
         // when
-        marsRover.performStoredCommands("L");
+        marsRover.executeCommands("L");
 
         // then
         assertEquals(0, marsRover.getXCoordinate());
@@ -81,7 +81,7 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "S");
 
         // when
-        marsRover.performStoredCommands("R");
+        marsRover.executeCommands("R");
 
         // then
         assertEquals(0, marsRover.getXCoordinate());
@@ -95,7 +95,7 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "E");
 
         // when
-        marsRover.performStoredCommands("M");
+        marsRover.executeCommands("M");
 
         // then
         assertEquals(1, marsRover.getXCoordinate());
@@ -109,7 +109,7 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "E");
 
         // when
-        marsRover.performStoredCommands("L");
+        marsRover.executeCommands("L");
 
         // then
         assertEquals(0, marsRover.getXCoordinate());
@@ -123,7 +123,7 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "E");
 
         // when
-        marsRover.performStoredCommands("R");
+        marsRover.executeCommands("R");
 
         // then
         assertEquals(0, marsRover.getXCoordinate());
@@ -137,7 +137,7 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "W");
 
         // when
-        marsRover.performStoredCommands("M");
+        marsRover.executeCommands("M");
 
         // then
         assertEquals(1, marsRover.getXCoordinate());
@@ -151,7 +151,7 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "W");
 
         // when
-        marsRover.performStoredCommands("L");
+        marsRover.executeCommands("L");
 
         // then
         assertEquals(0, marsRover.getXCoordinate());
@@ -165,7 +165,7 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "W");
 
         // when
-        marsRover.performStoredCommands("R");
+        marsRover.executeCommands("R");
 
         // then
         assertEquals(0, marsRover.getXCoordinate());
@@ -179,7 +179,7 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "N");
 
         // when
-        marsRover.performStoredCommands("MLRMM");
+        marsRover.executeCommands("MLRMM");
 
         // then
         assertEquals(0, marsRover.getXCoordinate());
